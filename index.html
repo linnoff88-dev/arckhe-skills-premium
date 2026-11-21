@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⚡ Skills Premium | INEMA.CLUB</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FACC15',
+            dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    .topic-explanation { display: none; }
+    .topic-explanation.active { display: block; }
+
+    /* Light mode overrides - OBRIGATORIO */
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+
+    /* Light mode - cores de acento - Emerald (T1) */
+    html:not(.dark) .text-emerald-400 { color: #059669; }
+    html:not(.dark) .bg-emerald-500\/20 { background-color: rgba(5, 150, 105, 0.12); }
+    html:not(.dark) .bg-emerald-500\/10 { background-color: rgba(5, 150, 105, 0.08); }
+    html:not(.dark) .border-emerald-500\/30 { border-color: rgba(5, 150, 105, 0.25); }
+    html:not(.dark) .hover\:bg-emerald-500\/10:hover { background-color: rgba(5, 150, 105, 0.08); }
+    html:not(.dark) .hover\:bg-emerald-500\/30:hover { background-color: rgba(5, 150, 105, 0.18); }
+    html:not(.dark) .hover\:text-emerald-400:hover { color: #059669; }
+    html:not(.dark) .group:hover .group-hover\:text-emerald-400 { color: #059669; }
+    html:not(.dark) .hover\:border-emerald-500\/30:hover { border-color: rgba(5, 150, 105, 0.25); }
+
+    /* Light mode - cores de acento - Blue (T2) */
+    html:not(.dark) .text-blue-400 { color: #2563eb; }
+    html:not(.dark) .bg-blue-500\/20 { background-color: rgba(37, 99, 235, 0.12); }
+    html:not(.dark) .bg-blue-500\/10 { background-color: rgba(37, 99, 235, 0.08); }
+    html:not(.dark) .border-blue-500\/30 { border-color: rgba(37, 99, 235, 0.25); }
+    html:not(.dark) .hover\:bg-blue-500\/10:hover { background-color: rgba(37, 99, 235, 0.08); }
+    html:not(.dark) .hover\:bg-blue-500\/30:hover { background-color: rgba(37, 99, 235, 0.18); }
+    html:not(.dark) .hover\:text-blue-400:hover { color: #2563eb; }
+    html:not(.dark) .group:hover .group-hover\:text-blue-400 { color: #2563eb; }
+    html:not(.dark) .hover\:border-blue-500\/30:hover { border-color: rgba(37, 99, 235, 0.25); }
+
+    /* Light mode - cores de acento - Purple (T3) */
+    html:not(.dark) .text-purple-400 { color: #7c3aed; }
+    html:not(.dark) .bg-purple-500\/20 { background-color: rgba(124, 58, 237, 0.12); }
+    html:not(.dark) .bg-purple-500\/10 { background-color: rgba(124, 58, 237, 0.08); }
+    html:not(.dark) .border-purple-500\/30 { border-color: rgba(124, 58, 237, 0.25); }
+    html:not(.dark) .hover\:bg-purple-500\/10:hover { background-color: rgba(124, 58, 237, 0.08); }
+    html:not(.dark) .hover\:bg-purple-500\/30:hover { background-color: rgba(124, 58, 237, 0.18); }
+    html:not(.dark) .hover\:text-purple-400:hover { color: #7c3aed; }
+    html:not(.dark) .group:hover .group-hover\:text-purple-400 { color: #7c3aed; }
+    html:not(.dark) .hover\:border-purple-500\/30:hover { border-color: rgba(124, 58, 237, 0.25); }
+
+    /* Light mode - cores de acento - Amber (T4) */
+    html:not(.dark) .text-amber-400 { color: #92400e; }
+    html:not(.dark) .bg-amber-500\/20 { background-color: rgba(217, 119, 6, 0.12); }
+    html:not(.dark) .bg-amber-500\/10 { background-color: rgba(217, 119, 6, 0.08); }
+    html:not(.dark) .border-amber-500\/30 { border-color: rgba(217, 119, 6, 0.25); }
+    html:not(.dark) .hover\:bg-amber-500\/10:hover { background-color: rgba(217, 119, 6, 0.08); }
+    html:not(.dark) .hover\:text-amber-400:hover { color: #92400e; }
+    html:not(.dark) .group:hover .group-hover\:text-amber-400 { color: #92400e; }
+
+    /* Light mode - cores de acento - Teal (T5) */
+    html:not(.dark) .text-teal-400 { color: #0d9488; }
+    html:not(.dark) .bg-teal-500\/20 { background-color: rgba(13, 148, 136, 0.12); }
+    html:not(.dark) .bg-teal-500\/10 { background-color: rgba(13, 148, 136, 0.08); }
+    html:not(.dark) .border-teal-500\/30 { border-color: rgba(13, 148, 136, 0.25); }
+    html:not(.dark) .hover\:bg-teal-500\/10:hover { background-color: rgba(13, 148, 136, 0.08); }
+    html:not(.dark) .hover\:text-teal-400:hover { color: #0d9488; }
+    html:not(.dark) .group:hover .group-hover\:text-teal-400 { color: #0d9488; }
+
+    /* Light mode - cores de acento - Rose (T6) */
+    html:not(.dark) .text-rose-400 { color: #9f1239; }
+    html:not(.dark) .bg-rose-500\/20 { background-color: rgba(225, 29, 72, 0.12); }
+    html:not(.dark) .bg-rose-500\/10 { background-color: rgba(225, 29, 72, 0.08); }
+    html:not(.dark) .border-rose-500\/30 { border-color: rgba(225, 29, 72, 0.25); }
+    html:not(.dark) .hover\:bg-rose-500\/10:hover { background-color: rgba(225, 29, 72, 0.08); }
+    html:not(.dark) .hover\:text-rose-400:hover { color: #9f1239; }
+    html:not(.dark) .group:hover .group-hover\:text-rose-400 { color: #9f1239; }
+
+    /* Light mode - remove gradientes (fundo uniforme) */
+    html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
+
+    /* Light mode - cores especiais */
+    html:not(.dark) .text-primary { color: #a16207; }
+    html:not(.dark) .bg-primary\/10 { background-color: rgba(161, 98, 7, 0.08); }
+    html:not(.dark) .border-primary\/40 { border-color: rgba(161, 98, 7, 0.25); }
+    html:not(.dark) .text-sky-400 { color: #0369a1; }
+    html:not(.dark) .text-yellow-400 { color: #a16207; }
+    html:not(.dark) .hover\:text-sky-300:hover { color: #0284c7; }
+    html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
+
+    /* Light mode - nav */
+    html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255, 255, 255, 0.95); }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <!-- NAVIGATION -->
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14">
+        <!-- Logo + INEMA.CLUB -->
+        <div class="flex items-center space-x-4">
+          <a href="index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
+            <span class="text-2xl">⚡</span>
+            <span class="font-bold text-lg hidden sm:inline">Skills Premium</span>
+          </a>
+          <span class="text-neutral-600">|</span>
+          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+        </div>
+
+        <!-- Trilhas + Theme Toggle -->
+        <div class="flex items-center space-x-1 sm:space-x-2">
+          <a href="curso/trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
+            <span class="sm:hidden">T1</span>
+            <span class="hidden sm:inline">Fundamentos</span>
+          </a>
+          <a href="curso/trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
+            <span class="sm:hidden">T2</span>
+            <span class="hidden sm:inline">Dicas Técnicas</span>
+          </a>
+          <a href="curso/trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
+            <span class="sm:hidden">T3</span>
+            <span class="hidden sm:inline">No Expert</span>
+          </a>
+
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CURSO PREMIUM + VISÃO GERAL CARD -->
+  <section class="bg-dark-800 border-b border-dark-600 py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center gap-6">
+        <div class="md:w-[30%] flex-shrink-0">
+          <span class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-3 border border-primary/40">CURSO PREMIUM</span>
+          <h1 class="text-3xl font-bold mb-2">⚡ Skills Premium</h1>
+          <p class="text-base text-neutral-400 mb-2 font-medium">Menos skills. Mais resultado.</p>
+          <p class="text-neutral-400 text-xs leading-relaxed mb-4">Aprenda a construir, otimizar e manter skills de alto nível no Claude Code — do zero ao expert. Três trilhas progressivas, 20 módulos, do iniciante ao expert.</p>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-2 mb-4 max-w-xs">
+            <div class="bg-dark-700 rounded-lg p-2 border border-dark-600">
+              <div class="text-base font-bold text-primary">3</div>
+              <div class="text-xs text-neutral-400">Trilhas</div>
+            </div>
+            <div class="bg-dark-700 rounded-lg p-2 border border-dark-600">
+              <div class="text-base font-bold text-primary">20</div>
+              <div class="text-xs text-neutral-400">Módulos</div>
+            </div>
+            <div class="bg-dark-700 rounded-lg p-2 border border-dark-600">
+              <div class="text-base font-bold text-primary">Todos</div>
+              <div class="text-xs text-neutral-400">os níveis</div>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-col gap-2">
+            <a href="curso/trilha1/index.html" class="inline-flex items-center px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm rounded-lg transition-colors justify-start">
+              Começar pelos Fundamentos →
+            </a>
+            <a href="#trilhas" class="inline-flex items-center px-4 py-2 border border-dark-600 hover:border-neutral-400 text-neutral-300 hover:text-neutral-100 font-semibold text-sm rounded-lg transition-colors justify-start">
+              Ver todas as trilhas
+            </a>
+          </div>
+        </div>
+        <div class="md:w-[70%]">
+          <img
+            src="doc/capa-curso.jpg"
+            alt="Mapa visual das 3 trilhas do curso Skills Premium"
+            class="rounded-xl w-full shadow-lg"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+    <!-- PARA QUEM É ESTE CURSO -->
+    <section class="mb-20">
+      <h2 class="text-2xl font-bold mb-2">Para quem é este curso</h2>
+      <p class="text-neutral-400 mb-8">Três perfis. Uma trilha certa para cada um.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Iniciante -->
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 hover:border-emerald-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center mb-4">
+            <span class="text-2xl">⚠️</span>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 text-emerald-400">Iniciante</h3>
+          <p class="text-neutral-400 text-sm mb-3">Acabou de descobrir as skills e quer começar com o pé direito — sem vícios, sem excessos.</p>
+          <p class="text-xs text-neutral-500">→ Comece pela Trilha 1: Fundamentos</p>
+        </div>
+
+        <!-- Intermediário -->
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 hover:border-blue-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center mb-4">
+            <span class="text-2xl">🔧</span>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 text-blue-400">Intermediário</h3>
+          <p class="text-neutral-400 text-sm mb-3">Já usa skills mas quer otimizar — melhorar o que tem, eliminar o que atrapalha e criar com mais qualidade.</p>
+          <p class="text-xs text-neutral-500">→ Siga pela Trilha 2: Dicas Técnicas</p>
+        </div>
+
+        <!-- Expert -->
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 hover:border-purple-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center mb-4">
+            <span class="text-2xl">🧪</span>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 text-purple-400">Expert</h3>
+          <p class="text-neutral-400 text-sm mb-3">Quer recursos avançados prontos — templates prontos, sub-agentes, prompts canhão e skills auto-iterativas.</p>
+          <p class="text-xs text-neutral-500">→ Mergulhe na Trilha 3: No Expert</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AS 3 TRILHAS -->
+    <section id="trilhas" class="mb-20">
+      <h2 class="text-2xl font-bold mb-2">As 3 Trilhas</h2>
+      <p class="text-neutral-400 mb-8">Conteúdo estruturado do iniciante ao expert. Siga em ordem ou entre pelo seu nível.</p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+        <!-- CARD T1 - FUNDAMENTOS (Emerald) -->
+        <div class="bg-dark-800 rounded-xl border border-dark-600 overflow-hidden hover:border-emerald-500/30 transition-colors flex flex-col">
+          <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 p-6 border-b border-dark-600">
+            <div class="flex items-center justify-between mb-3">
+              <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full">TRILHA 1</span>
+              <span class="text-xs text-neutral-500">6 módulos</span>
+            </div>
+            <h3 class="text-xl font-bold mb-1">⚠️ Fundamentos</h3>
+            <p class="text-xs text-neutral-500 mb-2">Para iniciantes</p>
+            <p class="text-neutral-400 text-sm">Base sólida sobre o que são skills, quando usá-las e como construir a sua primeira do zero.</p>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <ul class="space-y-2 mb-6 flex-1">
+              <li class="flex items-center space-x-2 text-sm text-neutral-300"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0">1</span><span>⚠️ O Problema do Excesso</span></li>
+              <li class="flex items-center space-x-2 text-sm text-neutral-300"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0">2</span><span>🧠 Nem Tudo Deve Ser Skill</span></li>
+              <li class="flex items-center space-x-2 text-sm text-neutral-300"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0">3</span><span>🏗️ Anatomia de uma Skill</span></li>
+              <li class="flex items-center space-x-2 text-sm text-neutral-300"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0">4</span><span>🎯 Como o Claude Escolhe</span></li>
+              <li class="flex items-center space-x-2 text-sm text-neutral-300"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0">5</span><span>📂 Progressive Disclosure</span></li>
+              <li class="flex items-center space-x-2 text-sm text-neutral-300"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0">6</span><span>🚀 Sua Primeira Skill</span></li>
+            </ul>
+            <div class="flex justify-start">
+              <a href="curso/trilha1/index.html" class="inline-flex items-center px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm rounded-lg transition-colors">Acessar Trilha 1 →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD T2 - DICAS TÉCNICAS (Blue) -->
+        <div class="bg-dark-800 rounded-xl border border-dark-600 overflow-hidden hover:border-blue-500/30 transition-colors flex flex-col">
+          <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 p-6 border-b border-dark-600">
+            <div class="flex items-center justify-between mb-3">
+              <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">TRILHA 2</span>
+              <span class="text-xs text-neutral-500">8 módulos</span>
+            </div>
+            <h3 class="text-xl font-bold mb-1">🔧 Dicas Técnicas</h3>
+            <p class="text-xs text-neutral-500 mb-2">Para intermediários</p>
+            <p class="text-neutral-400 text-sm">Técnicas práticas e diretas para elevar a qualidade das suas skills. Menos teoria, mais resultado.</p>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <ul class="space-y-2 mb-6 flex-1">
+              <li class="flex items-center space-x-2 text-sm text-neutral-300"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0">1</span><span>🧊 Rode a Frio</span></li>
+              <li class="flex items-center space-x-2 text-sm text-neutral-300"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0">2</span><span>📏 Orçamento de Descrição</span></li>
+              <li class="flex items-center space-x-2 text-sm text-neutral-300"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0">3</span><span>🎤 Faça a Skill Perguntar</span></li>
+              <li class="flex items-center space-x-2 text-sm text-neutral-300"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0">4</span><span>✍️ Regras de Tom e Escrita</span></li>
+              <li class="flex items-center space-x-2 text-sm text-neutral-300"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0">5</span><span>⭐ Nota da Experiência</span></li>
+              <li class="flex items-center space-x-2 text-sm text-neutral-300"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0">6</span><span>🔄 Feedback que Transforma</span></li>
+              <li class="flex items-center space-x-2 text-sm text-neutral-300"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0">7</span><span>🔀 Primitiva Errada</span></li>
+              <li class="flex items-center space-x-2 text-sm text-neutral-300"><span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold flex items-center justify-center flex-shrink-0">8</span><span>🔍 Auditoria Séria</span></li>
+            </ul>
+            <div class="flex justify-start">
+              <a href="curso/trilha2/index.html" class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm rounded-lg transition-colors">Acessar Trilha 2 →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD T3 - NO EXPERT (Purple) -->
+        <div class="bg-dark-800 rounded-xl border border-dark-600 overflow-hidden hover:border-purple-500/30 transition-colors flex flex-col">
+          <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 p-6 border-b border-dark-600">
+            <div class="flex items-center justify-between mb-3">
+              <span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full">TRILHA 3</span>
+              <span class="text-xs text-neutral-500">6 módulos</span>
+            </div>
+            <h3 class="text-xl font-bold mb-1">🧪 No Expert</h3>
+            <p class="text-xs text-neutral-500 mb-2">Para experts</p>
+            <p class="text-neutral-400 text-sm">Recursos avançados prontos para usar — templates, sub-agentes, prompts canhão e skills auto-iterativas.</p>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <ul class="space-y-2 mb-6 flex-1">
+              <li class="flex items-center space-x-2 text-sm text-neutral-300"><span class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold flex items-center justify-center flex-shrink-0">1</span><span>📋 Templates Prontos</span></li>
+              <li class="flex items-center space-x-2 text-sm text-neutral-300"><span class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold flex items-center justify-center flex-shrink-0">2</span><span>💥 Prompts Canhão</span></li>
+              <li class="flex items-center space-x-2 text-sm text-neutral-300"><span class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold flex items-center justify-center flex-shrink-0">3</span><span>🤖 Sub-agentes para Testar</span></li>
+              <li class="flex items-center space-x-2 text-sm text-neutral-300"><span class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold flex items-center justify-center flex-shrink-0">4</span><span>🧹 Consolidação de Skills</span></li>
+              <li class="flex items-center space-x-2 text-sm text-neutral-300"><span class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold flex items-center justify-center flex-shrink-0">5</span><span>📊 Stack Lean de Skills</span></li>
+              <li class="flex items-center space-x-2 text-sm text-neutral-300"><span class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold flex items-center justify-center flex-shrink-0">6</span><span>🔁 Skills Auto-iterativas</span></li>
+            </ul>
+            <div class="flex justify-start">
+              <a href="curso/trilha3/index.html" class="inline-flex items-center px-4 py-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm rounded-lg transition-colors">Acessar Trilha 3 →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SOBRE A FORMAÇÃO -->
+    <section class="mb-20">
+      <h2 class="text-2xl font-bold mb-2">Sobre esta Formação</h2>
+      <p class="text-neutral-400 mb-8">O que você vai encontrar aqui e por que isso importa.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+
+        <!-- O que são skills -->
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <h3 class="text-lg font-bold mb-3 flex items-center gap-2"><span class="text-primary">⚡</span> O que são Skills no Claude Code</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed mb-4">
+            Skills são arquivos Markdown que ensinam o Claude Code a executar tarefas específicas de forma consistente. Funcionam como instruções persistentes: você define o processo uma vez e o Claude segue sempre que invocado.
+          </p>
+          <p class="text-neutral-400 text-sm leading-relaxed">
+            Uma skill bem construída dispara no momento certo, coleta as informações necessárias, executa com qualidade e aprende com cada uso. Uma skill mal construída entra em colapso silencioso — consome contexto, dispara na hora errada e produz resultados genéricos.
+          </p>
+        </div>
+
+        <!-- O problema que este curso resolve -->
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <h3 class="text-lg font-bold mb-3 flex items-center gap-2"><span class="text-red-400">⚠️</span> O Problema que Este Curso Resolve</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed mb-4">
+            A maioria das pessoas que usa skills acumula dezenas delas sem nunca auditar, otimizar ou podá-las. O resultado: contexto entupido, triggers que colidem, skills que nunca disparam e uma sensação crescente de que o Claude "ficou burro".
+          </p>
+          <p class="text-neutral-400 text-sm leading-relaxed">
+            Não é o modelo. É a infraestrutura. Este curso te ensina a diagnosticar, corrigir e construir uma biblioteca de skills que funciona — enxuta, precisa e em constante melhoria.
+          </p>
+        </div>
+
+        <!-- O que você vai aprender -->
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <h3 class="text-lg font-bold mb-3 flex items-center gap-2"><span class="text-emerald-400">✅</span> O que Você Vai Aprender</h3>
+          <ul class="space-y-2 text-sm text-neutral-400">
+            <li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">→</span> Como skills funcionam por dentro e por que a maioria falha</li>
+            <li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">→</span> Quando usar skill, rule, Claude.md, CLI ou automação</li>
+            <li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">→</span> As 8 técnicas práticas para otimizar qualquer skill existente</li>
+            <li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">→</span> Como construir skills que entrevistam, avaliam e evoluem</li>
+            <li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">→</span> Templates prontos e prompts avançados para uso imediato</li>
+            <li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">→</span> Como usar sub-agentes para testar skills antes de usar</li>
+            <li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">→</span> Como manter uma biblioteca lean que melhora com o tempo</li>
+          </ul>
+        </div>
+
+        <!-- Como está estruturado -->
+        <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+          <h3 class="text-lg font-bold mb-3 flex items-center gap-2"><span class="text-blue-400">🗺️</span> Como Está Estruturado</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed mb-4">
+            Três trilhas independentes, cada uma com seu público e ritmo. Você pode seguir em ordem ou entrar diretamente no seu nível.
+          </p>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3">
+              <span class="inline-block px-2 py-0.5 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded mt-0.5">T1</span>
+              <p class="text-sm text-neutral-400"><span class="text-neutral-200 font-medium">Fundamentos</span> — 6 módulos conceituais com exemplos práticos. Para quem está começando ou quer rever a base.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="inline-block px-2 py-0.5 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded mt-0.5">T2</span>
+              <p class="text-sm text-neutral-400"><span class="text-neutral-200 font-medium">Dicas Técnicas</span> — 8 módulos aplicados, um por dica. Para quem já usa skills e quer otimizar.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="inline-block px-2 py-0.5 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded mt-0.5">T3</span>
+              <p class="text-sm text-neutral-400"><span class="text-neutral-200 font-medium">No Expert</span> — 6 módulos avançados com recursos prontos para usar. Para quem quer o nível máximo.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Box destaque final -->
+      <div class="bg-dark-700 rounded-xl border border-dark-600 p-6">
+        <p class="text-neutral-300 text-sm leading-relaxed text-center max-w-3xl mx-auto">
+          <span class="text-primary font-semibold">Skills Premium</span> não é sobre acumular mais skills — é sobre construir menos, melhor e com mais intenção. Uma biblioteca de 5 skills que disparam sempre supera 50 que nunca funcionam direito. Este curso te dá o caminho para chegar lá.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="mb-8">
+      <div class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-10 text-center">
+        <h2 class="text-2xl font-bold mb-3">Pronto para começar?</h2>
+        <p class="text-neutral-400 mb-8 max-w-xl mx-auto">
+          A Trilha 1 é o ponto de partida. Seis módulos que mudam como você pensa sobre skills — rápido, direto, sem enrolação.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="curso/trilha1/index.html" class="inline-flex items-center px-8 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base rounded-lg transition-colors">
+            ⚡ Começar pelos Fundamentos
+          </a>
+          <a href="curso/trilha3/index.html" class="inline-flex items-center px-8 py-3.5 border border-purple-500/30 hover:border-purple-400 text-purple-400 hover:text-purple-300 font-semibold text-base rounded-lg transition-colors">
+            🧪 Já sou expert
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-dark-600 py-8 mt-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+      <p>
+        <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a>
+        &nbsp;·&nbsp; © 2026 Skills Premium
+      </p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const html = document.documentElement;
+
+    // Inicializa icone correto
+    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))) {
+      themeToggleDarkIcon.classList.remove('hidden');
+      html.classList.remove('dark');
+    } else {
+      themeToggleLightIcon.classList.remove('hidden');
+    }
+
+    // Click handler
+    themeToggle.addEventListener('click', () => {
+      themeToggleDarkIcon.classList.toggle('hidden');
+      themeToggleLightIcon.classList.toggle('hidden');
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+
+</body>
+</html>
