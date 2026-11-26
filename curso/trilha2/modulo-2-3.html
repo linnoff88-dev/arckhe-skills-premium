@@ -99,7 +99,7 @@
         <h2 class="text-2xl font-bold">💀 O problema do loop morto</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        O loop morto é o padrão mais frustrante no uso de skills de geração de conteúdo. Funciona assim: você aciona a skill, recebe um output genérico, pede refinamento, recebe outro output ligeiramente diferente mas ainda genérico, pede mais refinamento, e assim por diante — sem nunca chegar no resultado que você realmente quer. <strong class="text-blue-400">O problema não é a qualidade da skill em si</strong> — é que ela não tem o contexto necessário para gerar algo realmente específico. Sem saber para quem, em qual plataforma e com qual objetivo, a skill só pode produzir o denominador comum de todos os casos possíveis: o genérico.
+        O loop morto é o padrêo mais frustrante no uso de skills de geraçêo de conteúdo. Funciona assim: você aciona a skill, recebe um output genérico, pede refinamento, recebe outro output ligeiramente diferente mas ainda genérico, pede mais refinamento, e assim por diante — sem nunca chegar no resultado que você realmente quer. <strong class="text-blue-400">O problema nêo é a qualidade da skill em si</strong> — é que ela nêo tem o contexto necessário para gerar algo realmente específico. Sem saber para quem, em qual plataforma e com qual objetivo, a skill só pode produzir o denominador comum de todos os casos possíveis: o genérico.
       </p>
 
       <!-- IMAGEM: Loop morto -->
@@ -138,11 +138,11 @@
         <h2 class="text-2xl font-bold">🛠️ O que é o Ask User Input Tool</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        O Ask User Input Tool é uma primitiva nativa do Claude Code que permite que a skill pause sua execução e faça uma pergunta direta ao usuário, aguardando a resposta antes de continuar. É o mecanismo que transforma a skill de um gerador de output em um <strong class="text-blue-400">sistema de entrevista + geração</strong>. Ao contrário de incluir perguntas no corpo do output (o que muitas pessoas fazem de forma gambiarra), o Ask User Input Tool é a forma técnica correta — ela pausa o fluxo e coleta a informação antes de qualquer geração acontecer.
+        O Ask User Input Tool é uma primitiva nativa do Claude Code que permite que a skill pause sua execuçêo e faça uma pergunta direta ao usuário, aguardando a resposta antes de continuar. É o mecanismo que transforma a skill de um gerador de output em um <strong class="text-blue-400">sistema de entrevista + geraçêo</strong>. Ao contrário de incluir perguntas no corpo do output (o que muitas pessoas fazem de forma gambiarra), o Ask User Input Tool é a forma técnica correta — ela pausa o fluxo e coleta a informaçêo antes de qualquer geraçêo acontecer.
       </p>
       <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🛠️</span> Ask User Input na Prática</h3>
-        <p class="text-neutral-300 mb-4">Na skill, a instrução para usar o Ask User Input Tool tem este formato:</p>
+        <p class="text-neutral-300 mb-4">Na skill, a instruçêo para usar o Ask User Input Tool tem este formato:</p>
         <div class="bg-dark-700/50 rounded-lg p-4 font-mono text-sm text-neutral-300">
           "Antes de gerar o output, use o Ask User Input Tool para coletar as seguintes informações:<br>
           1. Para qual produto ou serviço é o copy?<br>
@@ -154,7 +154,7 @@
       </div>
       <div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica Prática</h3>
-        <p class="text-neutral-300">Instrua a skill para confirmar as informações coletadas antes de gerar: "Após coletar as respostas, resuma o que foi informado e peça confirmação antes de iniciar a geração." Isso reduz erros por interpretação incorreta.</p>
+        <p class="text-neutral-300">Instrua a skill para confirmar as informações coletadas antes de gerar: "Após coletar as respostas, resuma o que foi informado e peça confirmaçêo antes de iniciar a geraçêo." Isso reduz erros por interpretaçêo incorreta.</p>
       </div>
     </section>
 
@@ -165,13 +165,13 @@
         <h2 class="text-2xl font-bold">⏰ Quando pedir informações</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Nem toda skill se beneficia de entrevista. Adicionar perguntas em skills onde o contexto já é suficiente cria <strong class="text-blue-400">fricção desnecessária que desgasta o usuário</strong>. O critério principal é: a saída da skill varia significativamente dependendo do contexto do usuário? Se sim, entreviste. Se a skill gera output relativamente consistente independente de quem a usa, a entrevista vai apenas atrasar o processo sem agregar qualidade.
+        Nem toda skill se beneficia de entrevista. Adicionar perguntas em skills onde o contexto já é suficiente cria <strong class="text-blue-400">fricçêo desnecessária que desgasta o usuário</strong>. O critério principal é: a saída da skill varia significativamente dependendo do contexto do usuário? Se sim, entreviste. Se a skill gera output relativamente consistente independente de quem a usa, a entrevista vai apenas atrasar o processo sem agregar qualidade.
       </p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
           <h4 class="font-bold text-blue-400 mb-4">✓ Skills que se beneficiam de entrevista</h4>
           <ul class="space-y-3 text-neutral-300">
-            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Copywriting e criação de conteúdo</span></li>
+            <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Copywriting e criaçêo de conteúdo</span></li>
             <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Análise de negócio e estratégia</span></li>
             <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Planejamento de projetos</span></li>
             <li class="flex items-start space-x-2"><span class="text-blue-400">✓</span><span>Scripts de vendas personalizados</span></li>
@@ -179,13 +179,13 @@
           </ul>
         </div>
         <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-          <h4 class="font-bold text-red-400 mb-4">✗ Skills que NÃO precisam de entrevista</h4>
+          <h4 class="font-bold text-red-400 mb-4">✗ Skills que NêO precisam de entrevista</h4>
           <ul class="space-y-3 text-neutral-300">
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Formatação de código ou texto</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Conversão de formatos (JSON → CSV)</span></li>
+            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Formataçêo de código ou texto</span></li>
+            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Conversêo de formatos (JSON → CSV)</span></li>
             <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Resumo de conteúdo já fornecido</span></li>
             <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Traduções diretas</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Geração de templates genéricos</span></li>
+            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Geraçêo de templates genéricos</span></li>
           </ul>
         </div>
       </div>
@@ -198,7 +198,7 @@
         <h2 class="text-2xl font-bold">💡 Quais perguntas fazem diferença</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        A armadilha comum é fazer muitas perguntas achando que mais contexto sempre é melhor. Não é. <strong class="text-blue-400">Perguntas demais criam atrito e reduzem a probabilidade de o usuário completar a entrevista.</strong> O segredo é identificar as 2-4 perguntas que têm o maior impacto na qualidade do output e fazer apenas essas. Perguntas sobre contexto e objetivo têm impacto muito maior do que perguntas sobre preferências estéticas secundárias.
+        A armadilha comum é fazer muitas perguntas achando que mais contexto sempre é melhor. Nêo é. <strong class="text-blue-400">Perguntas demais criam atrito e reduzem a probabilidade de o usuário completar a entrevista.</strong> O segredo é identificar as 2-4 perguntas que têm o maior impacto na qualidade do output e fazer apenas essas. Perguntas sobre contexto e objetivo têm impacto muito maior do que perguntas sobre preferências estéticas secundárias.
       </p>
       <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">💡</span> As 4 Perguntas de Maior Impacto</h3>
@@ -213,11 +213,11 @@
           </div>
           <div class="flex items-start space-x-3">
             <span class="w-7 h-7 rounded-full bg-blue-500/20 text-blue-400 font-bold flex items-center justify-center text-sm flex-shrink-0">3</span>
-            <div><strong class="text-white">Qual é o contexto ou produto?</strong><p class="text-neutral-300 text-sm mt-1">O que está sendo comunicado — sem isso, qualquer output é ficção.</p></div>
+            <div><strong class="text-white">Qual é o contexto ou produto?</strong><p class="text-neutral-300 text-sm mt-1">O que está sendo comunicado — sem isso, qualquer output é ficçêo.</p></div>
           </div>
           <div class="flex items-start space-x-3">
             <span class="w-7 h-7 rounded-full bg-blue-500/20 text-blue-400 font-bold flex items-center justify-center text-sm flex-shrink-0">4</span>
-            <div><strong class="text-white">Quais restrições existem?</strong><p class="text-neutral-300 text-sm mt-1">Limite de caracteres, coisas para evitar, tom específico — restrições são frequentemente esquecidas e fazem outputs serem rejeitados.</p></div>
+            <div><strong class="text-white">Quais restrições existem?</strong><p class="text-neutral-300 text-sm mt-1">Limite de caracteres, coisas para evitar, tom específico — restrições sêo frequentemente esquecidas e fazem outputs serem rejeitados.</p></div>
           </div>
         </div>
       </div>
@@ -230,7 +230,7 @@
         <h2 class="text-2xl font-bold">🔗 Estruturando a entrevista</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        A entrevista pode ser estruturada de duas formas: linear (perguntas fixas em sequência independente das respostas) ou adaptativa (pergunta seguinte depende da resposta anterior). Para a maioria das skills, a entrevista linear é mais simples de implementar e suficientemente eficaz. <strong class="text-blue-400">A entrevista adaptativa só justifica a complexidade adicional quando o domínio tem variações radicalmente diferentes</strong> que requerem conjuntos completamente distintos de informação.
+        A entrevista pode ser estruturada de duas formas: linear (perguntas fixas em sequência independente das respostas) ou adaptativa (pergunta seguinte depende da resposta anterior). Para a maioria das skills, a entrevista linear é mais simples de implementar e suficientemente eficaz. <strong class="text-blue-400">A entrevista adaptativa só justifica a complexidade adicional quando o domínio tem variações radicalmente diferentes</strong> que requerem conjuntos completamente distintos de informaçêo.
       </p>
       <div class="space-y-6 mb-6">
         <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
@@ -240,7 +240,7 @@
             P1: Descreva brevemente o produto ou serviço.<br>
             P2: Quem é o público-alvo? (idade, cargo, interesse principal)<br>
             P3: Qual plataforma? (Instagram, LinkedIn, email, etc.)<br>
-            P4: Qual o objetivo? (venda direta, geração de leads, engajamento)<br>
+            P4: Qual o objetivo? (venda direta, geraçêo de leads, engajamento)<br>
             Após P4, gere o copy."
           </div>
         </div>
@@ -249,7 +249,7 @@
           <div class="bg-dark-700/50 rounded-lg p-4 font-mono text-sm text-neutral-300">
             "P1: É um produto físico ou digital?<br>
             → Se físico: P2 sobre logística e especificações técnicas<br>
-            → Se digital: P2 sobre resultado prometido e transformação<br>
+            → Se digital: P2 sobre resultado prometido e transformaçêo<br>
             Continue adaptando as perguntas às respostas anteriores."
           </div>
         </div>
@@ -263,7 +263,7 @@
         <h2 class="text-2xl font-bold">📄 Exemplo de skill com entrevista</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        O exemplo abaixo mostra uma skill de copywriting para redes sociais completamente implementada com Ask User Input. Esta é a estrutura real que você pode usar como base e adaptar para seus próprios casos de uso. <strong class="text-blue-400">Observe a posição da entrevista: antes de qualquer instrução de geração</strong>, garantindo que o Claude colete tudo que precisa antes de começar a criar.
+        O exemplo abaixo mostra uma skill de copywriting para redes sociais completamente implementada com Ask User Input. Esta é a estrutura real que você pode usar como base e adaptar para seus próprios casos de uso. <strong class="text-blue-400">Observe a posiçêo da entrevista: antes de qualquer instruçêo de geraçêo</strong>, garantindo que o Claude colete tudo que precisa antes de começar a criar.
       </p>
       <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
         <div class="flex items-center justify-between mb-4">
@@ -281,13 +281,13 @@
           <p>3. "Qual plataforma e formato? (ex: Instagram carrossel, LinkedIn post)"</p>
           <p>4. "Objetivo principal? (venda, engajamento, leads)"</p>
           <br>
-          <p class="text-blue-400">## Geração</p>
+          <p class="text-blue-400">## Geraçêo</p>
           <p>Com o contexto coletado, gere o copy seguindo a estrutura AIDA...</p>
         </div>
       </div>
       <div class="bg-primary/10 rounded-xl border border-primary/40 p-6">
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Dica Prática</h3>
-        <p class="text-neutral-300">Adicione uma instrução ao final da entrevista: "Resuma as informações coletadas em uma linha e confirme com o usuário antes de prosseguir." Isso evita que o Claude interprete mal uma resposta ambígua e gere output baseado em premissas erradas.</p>
+        <p class="text-neutral-300">Adicione uma instruçêo ao final da entrevista: "Resuma as informações coletadas em uma linha e confirme com o usuário antes de prosseguir." Isso evita que o Claude interprete mal uma resposta ambígua e gere output baseado em premissas erradas.</p>
       </div>
     </section>
 
@@ -296,8 +296,8 @@
       <div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
         <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎤</span> Resumo do Módulo</h2>
         <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Loop morto = falta de contexto antes de gerar</strong><span class="text-neutral-400"> — mais iteração não resolve; contexto prévio resolve</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Ask User Input Tool pausa o fluxo e coleta</strong><span class="text-neutral-400"> — a forma técnica correta, não uma gambiarra</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Loop morto = falta de contexto antes de gerar</strong><span class="text-neutral-400"> — mais iteraçêo nêo resolve; contexto prévio resolve</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Ask User Input Tool pausa o fluxo e coleta</strong><span class="text-neutral-400"> — a forma técnica correta, nêo uma gambiarra</span></div></div>
           <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Skills de alto contexto se beneficiam mais</strong><span class="text-neutral-400"> — copywriting, estratégia, diagnóstico</span></div></div>
           <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">4 perguntas de maior impacto</strong><span class="text-neutral-400"> — público, objetivo, contexto, restrições</span></div></div>
           <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Entrevista linear para a maioria dos casos</strong><span class="text-neutral-400"> — adaptativa apenas para domínios com variações radicais</span></div></div>

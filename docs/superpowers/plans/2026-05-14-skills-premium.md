@@ -4,7 +4,7 @@
 
 **Goal:** Criar curso completo Skills Premium no formato INEMA.CLUB com 24 páginas HTML e fazer deploy no GitHub Pages do repo `inematds/skills-premium`.
 
-**Architecture:** Hub e Spoke — landing page → 3 trilha-index → 20 páginas de módulo. Todas as páginas seguem o design system INEMA.CLUB (dark/light mode, Tailwind CDN, navegação global, componentes padronizados).
+**Architecture:** Hub e Spoke — landing page → 3 trilha-index → 20 páginas de módulo. Todas as páginas seguem o design system INEMA.CLUB (dark/light mode, Tailwind CDN, navegaçêo global, componentes padronizados).
 
 **Tech Stack:** HTML puro, Tailwind CSS (CDN), JavaScript vanilla, GitHub Pages
 
@@ -14,7 +14,7 @@
 
 Antes de criar qualquer página, ler:
 - `/home/nmaldaner/.claude/skills/formato-curso/references/MASTER_COMPLETO.md` — templates HTML completos
-- `/home/nmaldaner/.claude/skills/formato-curso/references/CHECKLIST_REVISAO.md` — checklist de revisão
+- `/home/nmaldaner/.claude/skills/formato-curso/references/CHECKLIST_REVISAO.md` — checklist de revisêo
 
 ## Estrutura de Arquivos
 
@@ -78,7 +78,7 @@ O index usa cores de TODAS as trilhas. Incluir todos os overrides de light mode 
 **Estrutura da landing page:**
 - Nav com logo ⚡ Skills Premium + link INEMA.CLUB (sky-400) + links para as 3 trilhas
 - Hero: título, subtítulo, 3 stats (20 módulos, 3 trilhas, nível iniciante ao expert)
-- Seção "3 Trilhas" — 3 cards grandes (emerald, blue, purple) com lista de módulos de cada
+- Seçêo "3 Trilhas" — 3 cards grandes (emerald, blue, purple) com lista de módulos de cada
 - CTA final
 - Footer com INEMA.CLUB
 
@@ -106,28 +106,28 @@ git commit -m "feat: landing page"
 - Badge: TRILHA 1
 - Título: ⚠️ Fundamentos de Skills
 - Stats: 6 Módulos, 36+ Tópicos, ~3h, Iniciante
-- Navegação Rápida (OBRIGATÓRIA): grid 2 colunas com 6 cards-âncora
+- Navegaçêo Rápida (OBRIGATÓRIA): grid 2 colunas com 6 cards-âncora
 - 6 Cards de Módulo com tópicos expansíveis (mínimo 6 tópicos cada):
 
 **Módulo 1.1 — ⚠️ O Problema do Excesso** (~35 min)
-Tópicos: 1. A ilusão de cobertura | 2. Como skills entopem o contexto | 3. O peso invisível dos tokens | 4. Risco de segurança em skills externas | 5. Skills desatualizadas e o efeito fantasma | 6. Menos skills, mais resultado
+Tópicos: 1. A ilusêo de cobertura | 2. Como skills entopem o contexto | 3. O peso invisível dos tokens | 4. Risco de segurança em skills externas | 5. Skills desatualizadas e o efeito fantasma | 6. Menos skills, mais resultado
 
 **Módulo 1.2 — 🧠 Nem Tudo Deve Ser Skill** (~30 min)
-Tópicos: 1. A armadilha do "tem skill pra isso" | 2. Quando usar uma Rule | 3. Quando usar o Claude.md | 4. Quando usar CLI ou automação | 5. Quando uma API é melhor | 6. O critério de decisão correto
+Tópicos: 1. A armadilha do "tem skill pra isso" | 2. Quando usar uma Rule | 3. Quando usar o Claude.md | 4. Quando usar CLI ou automaçêo | 5. Quando uma API é melhor | 6. O critério de decisêo correto
 
 **Módulo 1.3 — 🏗️ Anatomia de uma Skill que Funciona** (~40 min)
-Tópicos: 1. Nome claro e único | 2. Descrição com gatilho | 3. Progressive disclosure | 4. UX de entrevista | 5. Reflexão no final | 6. A skill como escultura em argila
+Tópicos: 1. Nome claro e único | 2. Descriçêo com gatilho | 3. Progressive disclosure | 4. UX de entrevista | 5. Reflexêo no final | 6. A skill como escultura em argila
 
 **Módulo 1.4 — 🎯 Como o Claude Escolhe uma Skill** (~30 min)
-Tópicos: 1. Como o sistema de triggers funciona | 2. O que o Claude vê no carregamento | 3. Colisão entre skills similares | 4. O papel do nome vs. descrição | 5. Testando a escolha do Claude | 6. Corrigindo ambiguidades de trigger
+Tópicos: 1. Como o sistema de triggers funciona | 2. O que o Claude vê no carregamento | 3. Colisêo entre skills similares | 4. O papel do nome vs. descriçêo | 5. Testando a escolha do Claude | 6. Corrigindo ambiguidades de trigger
 
 **Módulo 1.5 — 📂 Progressive Disclosure** (~35 min)
-Tópicos: 1. O que é progressive disclosure | 2. Por que seções nomeadas importam | 3. Estrutura de seções num arquivo skill | 4. Exemplo: skill com e sem disclosure | 5. Quando o Claude lê cada seção | 6. Reduzindo hallucinations com disclosure
+Tópicos: 1. O que é progressive disclosure | 2. Por que seções nomeadas importam | 3. Estrutura de seções num arquivo skill | 4. Exemplo: skill com e sem disclosure | 5. Quando o Claude lê cada seçêo | 6. Reduzindo hallucinations com disclosure
 
 **Módulo 1.6 — 🚀 Sua Primeira Skill do Zero** (~45 min)
 Tópicos: 1. Escolhendo o caso de uso certo | 2. Escrevendo o frontmatter YAML | 3. Escrevendo o corpo da skill | 4. Primeiro teste de invoke | 5. Ajustando com base no resultado | 6. Exemplo completo comentado
 
-- [ ] **Step 1: Criar curso/trilha1/index.html com todos os 6 cards e Navegação Rápida**
+- [ ] **Step 1: Criar curso/trilha1/index.html com todos os 6 cards e Navegaçêo Rápida**
 - [ ] **Step 2: Verificar checklist**
 - [ ] **Step 3: Commit**
 
@@ -183,13 +183,13 @@ git commit -m "feat: trilha1 módulos 1.1 a 1.6"
 - Badge: TRILHA 2
 - Título: 🔧 Dicas Técnicas
 - Stats: 8 Módulos, 48+ Tópicos, ~4h, Intermediário
-- Navegação Rápida: grid 2-3 colunas com 8 cards-âncora
+- Navegaçêo Rápida: grid 2-3 colunas com 8 cards-âncora
 - 8 Cards de Módulo com tópicos expansíveis:
 
 **Módulo 2.1 — 🧊 Rode a Frio** (~25 min)
 Tópicos: 1. O que é rodar a frio | 2. Por que prompts vagos revelam a verdade | 3. Como fazer o teste | 4. Interpretando o resultado | 5. O que fazer quando a skill errada dispara | 6. Checklist do teste frio
 
-**Módulo 2.2 — 📏 Orçamento de Descrição** (~30 min)
+**Módulo 2.2 — 📏 Orçamento de Descriçêo** (~30 min)
 Tópicos: 1. O limite de caracteres invisível | 2. O que o Claude realmente vê | 3. Gatilho sempre no início | 4. Escrevendo descrições enxutas | 5. Testando o truncamento | 6. Exemplos antes e depois
 
 **Módulo 2.3 — 🎤 Faça a Skill Perguntar** (~35 min)
@@ -202,10 +202,10 @@ Tópicos: 1. Por que skills de copy precisam de regras | 2. Anti-sycophancy | 3.
 Tópicos: 1. A ideia do feedback loop | 2. Como pedir a nota | 3. A pergunta do porquê | 4. O que fazer com a nota | 5. Integrando na skill | 6. Exemplo de skill com rating
 
 **Módulo 2.6 — 🔄 Feedback que Transforma** (~40 min)
-Tópicos: 1. O que é reverse meta prompting | 2. Por que 90% não faz isso | 3. O prompt de reflexão | 4. Interpretando o diff da skill | 5. A melhoria de 1% por dia | 6. Exemplo de sessão de evolução
+Tópicos: 1. O que é reverse meta prompting | 2. Por que 90% nêo faz isso | 3. O prompt de reflexêo | 4. Interpretando o diff da skill | 5. A melhoria de 1% por dia | 6. Exemplo de sessêo de evoluçêo
 
 **Módulo 2.7 — 🔀 Primitiva Errada** (~30 min)
-Tópicos: 1. Skill como muleta | 2. Skill vs Rule — quando cada um | 3. Skill vs Claude.md | 4. Skill vs CLI | 5. Skill vs Automação determinística | 6. O fluxo de decisão
+Tópicos: 1. Skill como muleta | 2. Skill vs Rule — quando cada um | 3. Skill vs Claude.md | 4. Skill vs CLI | 5. Skill vs Automaçêo determinística | 6. O fluxo de decisêo
 
 **Módulo 2.8 — 🔍 Auditoria Séria** (~45 min)
 Tópicos: 1. Por que auditar | 2. O agente claude-code-guide | 3. O prompt de auditoria | 4. Checklist estrutural | 5. O que fazer com os resultados | 6. Cadência de auditoria
@@ -234,7 +234,7 @@ Cor da trilha: blue. Usar `text-blue-400`, `bg-blue-500/20`, `border-blue-500/30
 - `modulo-2-8.html`: `../../doc/ChatGPT Image 13 de mai. de 2026, 23_59_00.png` (Playbook de poda)
 
 - [ ] **Step 1: Criar modulo-2-1.html (Rode a Frio)**
-- [ ] **Step 2: Criar modulo-2-2.html (Orçamento de Descrição)**
+- [ ] **Step 2: Criar modulo-2-2.html (Orçamento de Descriçêo)**
 - [ ] **Step 3: Criar modulo-2-3.html (Faça a Skill Perguntar)**
 - [ ] **Step 4: Criar modulo-2-4.html (Regras de Tom)**
 - [ ] **Step 5: Criar modulo-2-5.html (Nota da Experiência)**
@@ -260,26 +260,26 @@ git commit -m "feat: trilha2 módulos 2.1 a 2.8"
 - Badge: TRILHA 3
 - Título: 🧪 No Expert
 - Stats: 6 Módulos, 36+ Tópicos, ~3h, Expert
-- Navegação Rápida: grid 2 colunas com 6 cards-âncora
+- Navegaçêo Rápida: grid 2 colunas com 6 cards-âncora
 - 6 Cards de Módulo:
 
 **Módulo 3.1 — 📋 Templates Prontos** (~40 min)
-Tópicos: 1. Skill de entrevista universal | 2. Skill de reflexão pós-sessão | 3. Skill de consolidação | 4. Skill de auditoria rápida | 5. Como adaptar templates | 6. Onde guardar e versionar
+Tópicos: 1. Skill de entrevista universal | 2. Skill de reflexêo pós-sessêo | 3. Skill de consolidaçêo | 4. Skill de auditoria rápida | 5. Como adaptar templates | 6. Onde guardar e versionar
 
-**Módulo 3.2 — 💥 Prompts Canhão** (~35 min)
-Tópicos: 1. O prompt de reverse meta prompting | 2. O prompt de auditoria com claude-code-guide | 3. O prompt de crítica estrutural | 4. O prompt de consolidação | 5. Combinando prompts em sequência | 6. Quando usar cada um
+**Módulo 3.2 — 💥 Prompts Canhêo** (~35 min)
+Tópicos: 1. O prompt de reverse meta prompting | 2. O prompt de auditoria com claude-code-guide | 3. O prompt de crítica estrutural | 4. O prompt de consolidaçêo | 5. Combinando prompts em sequência | 6. Quando usar cada um
 
 **Módulo 3.3 — 🤖 Sub-agentes para Testar** (~40 min)
-Tópicos: 1. Por que sub-agentes são melhores que testes manuais | 2. Agente de UX friction | 3. Agente de auditoria estrutural | 4. Como ler os relatórios | 5. Priorizando high vs low impact | 6. Exemplo de sessão completa
+Tópicos: 1. Por que sub-agentes sêo melhores que testes manuais | 2. Agente de UX friction | 3. Agente de auditoria estrutural | 4. Como ler os relatórios | 5. Priorizando high vs low impact | 6. Exemplo de sessêo completa
 
-**Módulo 3.4 — 🧹 Consolidação de Skills** (~35 min)
-Tópicos: 1. Identificando sobreposições | 2. O Skill Creator 2.0 | 3. O processo de fusão | 4. Testando a skill consolidada | 5. Quando não consolidar | 6. Mantendo o histórico de versões
+**Módulo 3.4 — 🧹 Consolidaçêo de Skills** (~35 min)
+Tópicos: 1. Identificando sobreposições | 2. O Skill Creator 2.0 | 3. O processo de fusêo | 4. Testando a skill consolidada | 5. Quando nêo consolidar | 6. Mantendo o histórico de versões
 
 **Módulo 3.5 — 📊 Stack Lean de Skills** (~30 min)
-Tópicos: 1. O inventário de skills | 2. Critérios de corte | 3. Quando deletar | 4. A regra do uso real | 5. Cadência de revisão | 6. Métricas de uma stack saudável
+Tópicos: 1. O inventário de skills | 2. Critérios de corte | 3. Quando deletar | 4. A regra do uso real | 5. Cadência de revisêo | 6. Métricas de uma stack saudável
 
 **Módulo 3.6 — 🔁 Skills que se Melhoram Sozinhas** (~45 min)
-Tópicos: 1. O conceito de skill auto-iterativa | 2. Bake-in de reflexão | 3. Bake-in de avaliação | 4. O loop de melhoria contínua | 5. Limites e riscos | 6. Exemplo de skill completa com auto-iteração
+Tópicos: 1. O conceito de skill auto-iterativa | 2. Bake-in de reflexêo | 3. Bake-in de avaliaçêo | 4. O loop de melhoria contínua | 5. Limites e riscos | 6. Exemplo de skill completa com auto-iteraçêo
 
 - [ ] **Step 1: Criar curso/trilha3/index.html**
 - [ ] **Step 2: Verificar checklist**
@@ -303,9 +303,9 @@ Cor da trilha: purple. Usar `text-purple-400`, `bg-purple-500/20`, `border-purpl
 - `modulo-3-5.html`: `../../doc/ChatGPT Image 13 de mai. de 2026, 23_59_00.png` (Playbook de poda)
 
 - [ ] **Step 1: Criar modulo-3-1.html (Templates Prontos)**
-- [ ] **Step 2: Criar modulo-3-2.html (Prompts Canhão)**
+- [ ] **Step 2: Criar modulo-3-2.html (Prompts Canhêo)**
 - [ ] **Step 3: Criar modulo-3-3.html (Sub-agentes para Testar)**
-- [ ] **Step 4: Criar modulo-3-4.html (Consolidação de Skills)**
+- [ ] **Step 4: Criar modulo-3-4.html (Consolidaçêo de Skills)**
 - [ ] **Step 5: Criar modulo-3-5.html (Stack Lean)**
 - [ ] **Step 6: Criar modulo-3-6.html (Skills Auto-iterativas)**
 - [ ] **Step 7: Verificar checklist em cada arquivo**
@@ -318,7 +318,7 @@ git commit -m "feat: trilha3 módulos 3.1 a 3.6"
 
 ---
 
-### Task 9: Deploy GitHub Pages e notificação
+### Task 9: Deploy GitHub Pages e notificaçêo
 
 - [ ] **Step 1: Push para GitHub**
 
@@ -349,7 +349,7 @@ gh api repos/inematds/skills-premium/pages \
 gh api repos/inematds/skills-premium/pages | python3 -c "import sys,json; p=json.load(sys.stdin); print(p.get('html_url',''))"
 ```
 
-- [ ] **Step 4: Enviar notificação via openpcbot**
+- [ ] **Step 4: Enviar notificaçêo via openpcbot**
 
 ```bash
 /home/nmaldaner/projetos/openpcbot/scripts/notify.sh "⚡ <b>Skills Premium publicado!</b>

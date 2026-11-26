@@ -108,21 +108,21 @@
         <h2 class="text-2xl font-bold">🏷️ Nome Claro e Único</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        O nome de uma skill não é apenas um rótulo — é o identificador primário pelo qual o sistema inteiro a reconhece e pelo qual você a invoca. <strong class="text-emerald-400">Um nome ruim contamina tudo que vem depois</strong>: cria colisões com outras skills, dificulta o invoke manual e torna impossível auditar o inventário de forma inteligente. A regra é direta: o nome deve ser específico o suficiente para ser inequívoco e descritivo o suficiente para comunicar a função sem precisar abrir o arquivo.
+        O nome de uma skill nêo é apenas um rótulo — é o identificador primário pelo qual o sistema inteiro a reconhece e pelo qual você a invoca. <strong class="text-emerald-400">Um nome ruim contamina tudo que vem depois</strong>: cria colisões com outras skills, dificulta o invoke manual e torna impossível auditar o inventário de forma inteligente. A regra é direta: o nome deve ser específico o suficiente para ser inequívoco e descritivo o suficiente para comunicar a funçêo sem precisar abrir o arquivo.
       </p>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        A convenção de nomenclatura mais eficaz segue o padrão domínio-função: "n8n-workflow-patterns", "code-review-python", "session-handoff", "brand-guidelines". Em poucos caracteres, você sabe o contexto de uso e a função principal. Evite nomes genéricos como "helper", "assistant", "tool" ou "workflow" — eles são inutilizáveis para triagem e criam confusão em um inventário com 10 ou mais skills.
+        A convençêo de nomenclatura mais eficaz segue o padrêo domínio-funçêo: "n8n-workflow-patterns", "code-review-python", "session-handoff", "brand-guidelines". Em poucos caracteres, você sabe o contexto de uso e a funçêo principal. Evite nomes genéricos como "helper", "assistant", "tool" ou "workflow" — eles sêo inutilizáveis para triagem e criam confusêo em um inventário com 10 ou mais skills.
       </p>
       <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
           <span class="mr-2">🏷️</span> Bons vs. Maus Nomes
         </h3>
         <ul class="space-y-3 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span><code class="bg-dark-700 px-1 rounded text-sm">n8n-expression-syntax</code> — domínio claro, função específica</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span><code class="bg-dark-700 px-1 rounded text-sm">session-handoff</code> — ação específica e reconhecível</span></li>
+          <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span><code class="bg-dark-700 px-1 rounded text-sm">n8n-expression-syntax</code> — domínio claro, funçêo específica</span></li>
+          <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span><code class="bg-dark-700 px-1 rounded text-sm">session-handoff</code> — açêo específica e reconhecível</span></li>
           <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span><code class="bg-dark-700 px-1 rounded text-sm">frontend-design</code> — domínio e tipo de trabalho claros</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><code class="bg-dark-700 px-1 rounded text-sm">helper</code> — completamente genérico, sem informação</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><code class="bg-dark-700 px-1 rounded text-sm">my-tool</code> — sem contexto de uso ou função</span></li>
+          <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><code class="bg-dark-700 px-1 rounded text-sm">helper</code> — completamente genérico, sem informaçêo</span></li>
+          <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><code class="bg-dark-700 px-1 rounded text-sm">my-tool</code> — sem contexto de uso ou funçêo</span></li>
           <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span><code class="bg-dark-700 px-1 rounded text-sm">workflow</code> — ambíguo, qual workflow?</span></li>
         </ul>
       </div>
@@ -130,7 +130,7 @@
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
           <span class="mr-2">💡</span> Dica Prática
         </h3>
-        <p class="text-neutral-300">Teste o nome com este critério: se você listar todas as suas skills por nome, consegue entender a função de cada uma sem abrir nenhum arquivo? Se não, alguns nomes precisam de revisão. Nomes são gratuitos de mudar e o impacto é imediato.</p>
+        <p class="text-neutral-300">Teste o nome com este critério: se você listar todas as suas skills por nome, consegue entender a funçêo de cada uma sem abrir nenhum arquivo? Se nêo, alguns nomes precisam de revisêo. Nomes sêo gratuitos de mudar e o impacto é imediato.</p>
       </div>
     </section>
 
@@ -138,32 +138,32 @@
     <section id="topico-2" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">2</span>
-        <h2 class="text-2xl font-bold">🎯 Descrição com Gatilho</h2>
+        <h2 class="text-2xl font-bold">🎯 Descriçêo com Gatilho</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        A descrição no frontmatter é o contrato entre a skill e o sistema de seleção do Claude. É o texto que o Claude usa para decidir, em frações de segundo, se deve invocar esta skill para o contexto atual. Uma descrição que não menciona os casos de uso concretos e as palavras-chave de trigger vai resultar em uma skill que nunca dispara automaticamente — ou que dispara na hora errada.
+        A descriçêo no frontmatter é o contrato entre a skill e o sistema de seleçêo do Claude. É o texto que o Claude usa para decidir, em frações de segundo, se deve invocar esta skill para o contexto atual. Uma descriçêo que nêo menciona os casos de uso concretos e as palavras-chave de trigger vai resultar em uma skill que nunca dispara automaticamente — ou que dispara na hora errada.
       </p>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        A estrutura ideal de uma descrição de gatilho inclui: o que a skill faz (uma frase), quando usar (condições específicas), e palavras-chave que provavelmente aparecerão nas conversas onde a skill é relevante. <strong class="text-emerald-400">A descrição é uma declaração de intenção e um filtro de relevância</strong> ao mesmo tempo. Invista tempo aqui — é onde a maioria das skills falha silenciosamente.
+        A estrutura ideal de uma descriçêo de gatilho inclui: o que a skill faz (uma frase), quando usar (condições específicas), e palavras-chave que provavelmente aparecerêo nas conversas onde a skill é relevante. <strong class="text-emerald-400">A descriçêo é uma declaraçêo de intençêo e um filtro de relevância</strong> ao mesmo tempo. Invista tempo aqui — é onde a maioria das skills falha silenciosamente.
       </p>
       <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">📝</span> Anatomia de uma Boa Descrição
+          <span class="mr-2">📝</span> Anatomia de uma Boa Descriçêo
         </h3>
         <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">1.</span><span><strong>O que faz:</strong> "Esta skill guia a criação de workflows no n8n..."</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">2.</span><span><strong>Quando usar:</strong> "Use quando o usuário mencionar n8n, automação de workflows, nodes, expressions..."</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">3.</span><span><strong>Palavras-chave:</strong> incluir termos técnicos do domínio que aparecerão nas conversas reais</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">4.</span><span><strong>Não usar quando:</strong> opcional mas poderoso para evitar falsos positivos</span></li>
+          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">1.</span><span><strong>O que faz:</strong> "Esta skill guia a criaçêo de workflows no n8n..."</span></li>
+          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">2.</span><span><strong>Quando usar:</strong> "Use quando o usuário mencionar n8n, automaçêo de workflows, nodes, expressions..."</span></li>
+          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">3.</span><span><strong>Palavras-chave:</strong> incluir termos técnicos do domínio que aparecerêo nas conversas reais</span></li>
+          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">4.</span><span><strong>Nêo usar quando:</strong> opcional mas poderoso para evitar falsos positivos</span></li>
         </ul>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
-          <h4 class="font-bold text-emerald-400 mb-4">✓ Descrição eficaz</h4>
-          <p class="text-neutral-300 text-sm">"Guia para criação de workflows no n8n. Use quando o usuário mencionar n8n, nodes, expressions, automações, triggers ou integrações no n8n. Não usar para automações em outras plataformas."</p>
+          <h4 class="font-bold text-emerald-400 mb-4">✓ Descriçêo eficaz</h4>
+          <p class="text-neutral-300 text-sm">"Guia para criaçêo de workflows no n8n. Use quando o usuário mencionar n8n, nodes, expressions, automações, triggers ou integrações no n8n. Nêo usar para automações em outras plataformas."</p>
         </div>
         <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-          <h4 class="font-bold text-red-400 mb-4">✗ Descrição fraca</h4>
+          <h4 class="font-bold text-red-400 mb-4">✗ Descriçêo fraca</h4>
           <p class="text-neutral-300 text-sm">"Ajuda com automações e workflows. Útil para integrar sistemas e criar processos automatizados de forma eficiente."</p>
         </div>
       </div>
@@ -176,20 +176,20 @@
         <h2 class="text-2xl font-bold">📋 Progressive Disclosure</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Progressive disclosure é a técnica de organizar o conteúdo da skill em seções nomeadas, onde cada seção é relevante apenas para determinados contextos de uso. Em vez de um bloco monolítico de instruções que o Claude processa inteiramente, você cria uma estrutura navegável onde <strong class="text-emerald-400">o Claude lê apenas o que é pertinente à tarefa atual</strong>. O resultado é uma skill mais eficiente, menos propensa a confusões e significativamente mais poderosa.
+        Progressive disclosure é a técnica de organizar o conteúdo da skill em seções nomeadas, onde cada seçêo é relevante apenas para determinados contextos de uso. Em vez de um bloco monolítico de instruções que o Claude processa inteiramente, você cria uma estrutura navegável onde <strong class="text-emerald-400">o Claude lê apenas o que é pertinente à tarefa atual</strong>. O resultado é uma skill mais eficiente, menos propensa a confusões e significativamente mais poderosa.
       </p>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        A estrutura típica com disclosure inclui: uma seção de visão geral sempre carregada, seções de instruções para casos de uso específicos, exemplos organizados por cenário, e referências técnicas consultadas sob demanda. Headers com nomes descritivos funcionam como índices que o Claude usa para navegar o conteúdo sem precisar ler tudo linearmente.
+        A estrutura típica com disclosure inclui: uma seçêo de visêo geral sempre carregada, seções de instruções para casos de uso específicos, exemplos organizados por cenário, e referências técnicas consultadas sob demanda. Headers com nomes descritivos funcionam como índices que o Claude usa para navegar o conteúdo sem precisar ler tudo linearmente.
       </p>
 
-      <img src="../../doc/ChatGPT Image 13 de mai. de 2026, 23_53_52.png" alt="Ilustração da estrutura ideal de uma skill com progressive disclosure" class="max-w-2xl mx-auto rounded-xl shadow-lg my-8 w-full">
+      <img src="../../doc/ChatGPT Image 13 de mai. de 2026, 23_53_52.png" alt="Ilustraçêo da estrutura ideal de uma skill com progressive disclosure" class="max-w-2xl mx-auto rounded-xl shadow-lg my-8 w-full">
 
       <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
           <span class="mr-2">🗂️</span> Estrutura com Disclosure
         </h3>
         <ul class="space-y-2 text-neutral-300">
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong># Visão Geral</strong> — sempre lida, contexto essencial da skill</span></li>
+          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong># Visêo Geral</strong> — sempre lida, contexto essencial da skill</span></li>
           <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>## Caso de Uso A</strong> — lida quando o contexto corresponde</span></li>
           <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>## Caso de Uso B</strong> — lida quando o contexto corresponde</span></li>
           <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">•</span><span><strong>## Exemplos</strong> — consultada quando precisa de referência concreta</span></li>
@@ -200,7 +200,7 @@
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
           <span class="mr-2">💡</span> Dica Prática
         </h3>
-        <p class="text-neutral-300">Se sua skill tem mais de 300 palavras em um único bloco contínuo, ela é candidata imediata à refatoração com disclosure. Identifique os sub-casos de uso e crie seções separadas para cada um. Você vai notar a melhoria na qualidade das respostas imediatamente.</p>
+        <p class="text-neutral-300">Se sua skill tem mais de 300 palavras em um único bloco contínuo, ela é candidata imediata à refatoraçêo com disclosure. Identifique os sub-casos de uso e crie seções separadas para cada um. Você vai notar a melhoria na qualidade das respostas imediatamente.</p>
       </div>
     </section>
 
@@ -211,20 +211,20 @@
         <h2 class="text-2xl font-bold">🎤 UX de Entrevista</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Skills de alta qualidade não entram em execução imediatamente ao ser invocadas — elas primeiro fazem perguntas estratégicas para entender o contexto específico do usuário. Essa fase de "entrevista" é inspirada em como consultores experientes trabalham: antes de propor qualquer solução, eles diagnosticam. <strong class="text-emerald-400">A skill que pergunta antes de agir produz outputs significativamente melhores</strong> e reduz o retrabalho quase a zero.
+        Skills de alta qualidade nêo entram em execuçêo imediatamente ao ser invocadas — elas primeiro fazem perguntas estratégicas para entender o contexto específico do usuário. Essa fase de "entrevista" é inspirada em como consultores experientes trabalham: antes de propor qualquer soluçêo, eles diagnosticam. <strong class="text-emerald-400">A skill que pergunta antes de agir produz outputs significativamente melhores</strong> e reduz o retrabalho quase a zero.
       </p>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        A UX de entrevista na prática é simples: na seção de início da skill, você instrui o Claude a fazer 2-4 perguntas essenciais antes de executar qualquer parte do fluxo principal. As perguntas devem ser cirúrgicas — focadas nos pontos de variação que mais impactam a qualidade do output. Não é um interrogatório, é uma coleta de contexto precisa e rápida que torna tudo que vem depois mais acertado.
+        A UX de entrevista na prática é simples: na seçêo de início da skill, você instrui o Claude a fazer 2-4 perguntas essenciais antes de executar qualquer parte do fluxo principal. As perguntas devem ser cirúrgicas — focadas nos pontos de variaçêo que mais impactam a qualidade do output. Nêo é um interrogatório, é uma coleta de contexto precisa e rápida que torna tudo que vem depois mais acertado.
       </p>
       <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
           <span class="mr-2">❓</span> Perguntas de Entrevista Eficazes
         </h3>
-        <p class="text-neutral-300 mb-4">Boas perguntas de entrevista são específicas, binárias ou de múltipla escolha quando possível, e focadas no que mais impacta o resultado:</p>
+        <p class="text-neutral-300 mb-4">Boas perguntas de entrevista sêo específicas, binárias ou de múltipla escolha quando possível, e focadas no que mais impacta o resultado:</p>
         <ul class="space-y-2 text-neutral-300">
           <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">✓</span><span>"É para uso pessoal, profissional ou educacional?"</span></li>
           <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">✓</span><span>"Qual é o nível técnico do público-alvo?"</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">✓</span><span>"Já tem uma versão existente ou está começando do zero?"</span></li>
+          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">✓</span><span>"Já tem uma versêo existente ou está começando do zero?"</span></li>
           <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>"Pode me contar tudo sobre o que você precisa?" (muito aberto)</span></li>
           <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Fazer mais de 5 perguntas de uma vez (sobrecarga do usuário)</span></li>
         </ul>
@@ -241,21 +241,21 @@
     <section id="topico-5" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold">🔄 Reflexão no Final</h2>
+        <h2 class="text-2xl font-bold">🔄 Reflexêo no Final</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Uma skill que termina o trabalho e encerra a conversa desperdiça uma oportunidade valiosa: o fechamento do loop de aprendizado. A reflexão final é uma seção instruindo o Claude a, ao concluir o trabalho principal, fazer uma síntese estruturada do que foi feito, <strong class="text-emerald-400">identificar pontos de melhoria observados durante a execução</strong>, e sugerir próximos passos concretos para o usuário.
+        Uma skill que termina o trabalho e encerra a conversa desperdiça uma oportunidade valiosa: o fechamento do loop de aprendizado. A reflexêo final é uma seçêo instruindo o Claude a, ao concluir o trabalho principal, fazer uma síntese estruturada do que foi feito, <strong class="text-emerald-400">identificar pontos de melhoria observados durante a execuçêo</strong>, e sugerir próximos passos concretos para o usuário.
       </p>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Esse fechamento estruturado tem múltiplos benefícios: o usuário recebe uma visão consolidada do trabalho, o Claude é forçado a revisar o que produziu antes de encerrar (o que frequentemente captura inconsistências), e a conversa termina com direcionamento claro em vez de uma resposta solta. Skills com reflexão final têm taxas de satisfação significativamente maiores do que skills que simplesmente entregam o output e param.
+        Esse fechamento estruturado tem múltiplos benefícios: o usuário recebe uma visêo consolidada do trabalho, o Claude é forçado a revisar o que produziu antes de encerrar (o que frequentemente captura inconsistências), e a conversa termina com direcionamento claro em vez de uma resposta solta. Skills com reflexêo final têm taxas de satisfaçêo significativamente maiores do que skills que simplesmente entregam o output e param.
       </p>
       <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">📋</span> Estrutura da Reflexão Final
+          <span class="mr-2">📋</span> Estrutura da Reflexêo Final
         </h3>
         <ul class="space-y-2 text-neutral-300">
           <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">1.</span><span><strong>O que foi feito:</strong> resumo dos principais outputs produzidos</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">2.</span><span><strong>Pontos de atenção:</strong> limitações ou incertezas identificadas durante o trabalho</span></li>
+          <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">2.</span><span><strong>Pontos de atençêo:</strong> limitações ou incertezas identificadas durante o trabalho</span></li>
           <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">3.</span><span><strong>Próximos passos:</strong> ações concretas recomendadas para o usuário</span></li>
           <li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">4.</span><span><strong>Pergunta de continuidade:</strong> opcional — convida o usuário a aprofundar se necessário</span></li>
         </ul>
@@ -264,7 +264,7 @@
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center">
           <span class="mr-2">💡</span> Dica Prática
         </h3>
-        <p class="text-neutral-300">Adicione ao final de toda skill uma seção "## Reflexão Final" com a instrução: "Ao concluir o trabalho, apresente: o que foi entregue, pontos de atenção ou limitações identificados, e 2-3 próximos passos concretos." Leva 2 minutos para adicionar e muda a qualidade percebida da skill radicalmente.</p>
+        <p class="text-neutral-300">Adicione ao final de toda skill uma seçêo "## Reflexêo Final" com a instruçêo: "Ao concluir o trabalho, apresente: o que foi entregue, pontos de atençêo ou limitações identificados, e 2-3 próximos passos concretos." Leva 2 minutos para adicionar e muda a qualidade percebida da skill radicalmente.</p>
       </div>
     </section>
 
@@ -275,38 +275,38 @@
         <h2 class="text-2xl font-bold">🗿 A Skill como Escultura</h2>
       </div>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        Miguel Ângelo dizia que o bloco de mármore já continha a estátua — seu trabalho era apenas remover o que não era ela. Skills funcionam de forma similar: você não cria a skill perfeita na primeira versão. Você cria uma versão funcional, usa ela, observa onde ela falha ou deixa a desejar, e remove ou refina o que não serve. <strong class="text-emerald-400">Melhorar 1% a cada uso por 30 dias resulta em uma skill 35% melhor ao final do mês</strong> — uma transformação significativa por investimentos mínimos diários.
+        Miguel Ângelo dizia que o bloco de mármore já continha a estátua — seu trabalho era apenas remover o que nêo era ela. Skills funcionam de forma similar: você nêo cria a skill perfeita na primeira versêo. Você cria uma versêo funcional, usa ela, observa onde ela falha ou deixa a desejar, e remove ou refina o que nêo serve. <strong class="text-emerald-400">Melhorar 1% a cada uso por 30 dias resulta em uma skill 35% melhor ao final do mês</strong> — uma transformaçêo significativa por investimentos mínimos diários.
       </p>
       <p class="text-neutral-300 mb-6 leading-relaxed">
-        O hábito de iteração diária é o diferencial entre quem tem skills que funcionam razoavelmente e quem tem skills que são genuinamente extraordinárias. A resistência à iteração é normalmente psicológica: "já funciona, para que mexer?" Mas "funciona razoavelmente" e "é excelente" são distâncias enormes quando multiplicadas pelo uso diário ao longo de meses e anos.
+        O hábito de iteraçêo diária é o diferencial entre quem tem skills que funcionam razoavelmente e quem tem skills que sêo genuinamente extraordinárias. A resistência à iteraçêo é normalmente psicológica: "já funciona, para que mexer?" Mas "funciona razoavelmente" e "é excelente" sêo distâncias enormes quando multiplicadas pelo uso diário ao longo de meses e anos.
       </p>
       <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center">
-          <span class="mr-2">🔄</span> Ciclo de Iteração
+          <span class="mr-2">🔄</span> Ciclo de Iteraçêo
         </h3>
         <ul class="space-y-3 text-neutral-300">
           <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold mt-1">1.</span><span>Use a skill em contexto real</span></li>
           <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold mt-1">2.</span><span>Observe onde o output ficou aquém do ideal</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold mt-1">3.</span><span>Identifique a causa no arquivo da skill (instrução faltando? ambiguidade?)</span></li>
+          <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold mt-1">3.</span><span>Identifique a causa no arquivo da skill (instruçêo faltando? ambiguidade?)</span></li>
           <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold mt-1">4.</span><span>Faça um ajuste cirúrgico — mínimo necessário para corrigir</span></li>
           <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold mt-1">5.</span><span>Teste com o mesmo cenário que falhou</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold mt-1">6.</span><span>Repita — cada iteração leva menos de 10 minutos</span></li>
+          <li class="flex items-start space-x-2"><span class="text-emerald-400 font-bold mt-1">6.</span><span>Repita — cada iteraçêo leva menos de 10 minutos</span></li>
         </ul>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
-          <h4 class="font-bold text-emerald-400 mb-4">✓ Mentalidade de Iteração</h4>
+          <h4 class="font-bold text-emerald-400 mb-4">✓ Mentalidade de Iteraçêo</h4>
           <ul class="space-y-3 text-neutral-300">
             <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Trate cada uso como oportunidade de aprendizado</span></li>
-            <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Itere pequeno e frequente, não grande e esporádico</span></li>
+            <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Itere pequeno e frequente, nêo grande e esporádico</span></li>
             <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Documente o que mudou e por quê no próprio arquivo</span></li>
           </ul>
         </div>
         <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-          <h4 class="font-bold text-red-400 mb-4">✗ Armadilhas de Iteração</h4>
+          <h4 class="font-bold text-red-400 mb-4">✗ Armadilhas de Iteraçêo</h4>
           <ul class="space-y-3 text-neutral-300">
             <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Reescrever a skill inteira quando um ajuste pontual bastaria</span></li>
-            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Aguardar a "versão perfeita" antes de usar em produção</span></li>
+            <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Aguardar a "versêo perfeita" antes de usar em produçêo</span></li>
             <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Nunca iterar porque "já funciona bem o suficiente"</span></li>
           </ul>
         </div>
@@ -320,16 +320,16 @@
           <span class="mr-3">✅</span> Resumo do Módulo 1.3
         </h2>
         <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-white">Nome claro e único</strong><span class="text-neutral-400"> — padrão domínio-função; inequívoco na listagem sem abrir o arquivo</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-white">Descrição com gatilho</strong><span class="text-neutral-400"> — o que faz, quando usar, palavras-chave de trigger; é o contrato com o sistema de seleção</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-white">Nome claro e único</strong><span class="text-neutral-400"> — padrêo domínio-funçêo; inequívoco na listagem sem abrir o arquivo</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-white">Descriçêo com gatilho</strong><span class="text-neutral-400"> — o que faz, quando usar, palavras-chave de trigger; é o contrato com o sistema de seleçêo</span></div></div>
           <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-white">Progressive disclosure</strong><span class="text-neutral-400"> — seções nomeadas permitem ao Claude ler apenas o que é relevante ao contexto atual</span></div></div>
           <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-white">UX de entrevista</strong><span class="text-neutral-400"> — 2-4 perguntas cirúrgicas antes de agir; diagnóstica antes de solucionar</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-white">Reflexão no final</strong><span class="text-neutral-400"> — síntese do que foi feito, pontos de atenção e próximos passos; fecha o loop</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-white">Iteração contínua</strong><span class="text-neutral-400"> — 1% de melhoria por uso; skills excelentes são esculpidas, não criadas de uma vez</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-white">Reflexêo no final</strong><span class="text-neutral-400"> — síntese do que foi feito, pontos de atençêo e próximos passos; fecha o loop</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">✓</span><div><strong class="text-white">Iteraçêo contínua</strong><span class="text-neutral-400"> — 1% de melhoria por uso; skills excelentes sêo esculpidas, nêo criadas de uma vez</span></div></div>
         </div>
         <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
           <h3 class="font-semibold text-emerald-400 mb-2">Próximo Módulo:</h3>
-          <p class="text-neutral-300">1.4 — 🎯 Como o Claude Escolhe uma Skill — Entenda o mecanismo interno de seleção e como corrigir ambiguidades de trigger</p>
+          <p class="text-neutral-300">1.4 — 🎯 Como o Claude Escolhe uma Skill — Entenda o mecanismo interno de seleçêo e como corrigir ambiguidades de trigger</p>
         </div>
         <div class="flex flex-col sm:flex-row gap-4">
           <a href="modulo-1-2.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Módulo Anterior</a>
