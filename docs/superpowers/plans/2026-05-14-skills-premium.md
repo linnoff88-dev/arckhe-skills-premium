@@ -2,9 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Criar curso completo Skills Premium no formato INEMA.CLUB com 24 páginas HTML e fazer deploy no GitHub Pages do repo `inematds/skills-premium`.
+**Goal:** Criar curso completo Skills Premium no formato ARCKHÉ AI com 24 páginas HTML e fazer deploy no GitHub Pages do repo `linnoff88-dev/skills-premium`.
 
-**Architecture:** Hub e Spoke — landing page → 3 trilha-index → 20 páginas de módulo. Todas as páginas seguem o design system INEMA.CLUB (dark/light mode, Tailwind CDN, navegaçêo global, componentes padronizados).
+**Architecture:** Hub e Spoke — landing page → 3 trilha-index → 20 páginas de módulo. Todas as páginas seguem o design system ARCKHÉ AI (dark/light mode, Tailwind CDN, navegaçêo global, componentes padronizados).
 
 **Tech Stack:** HTML puro, Tailwind CSS (CDN), JavaScript vanilla, GitHub Pages
 
@@ -51,7 +51,7 @@ Antes de criar qualquer página, ler:
 ```bash
 cd /home/nmaldaner/projetos/skills-premium
 git init
-git remote add origin https://github.com/inematds/skills-premium.git
+git remote add origin https://github.com/linnoff88-dev/skills-premium.git
 ```
 
 - [ ] **Step 2: Criar estrutura de diretórios**
@@ -76,11 +76,11 @@ echo ".DS_Store" > .gitignore
 O index usa cores de TODAS as trilhas. Incluir todos os overrides de light mode (emerald, blue, purple e hover variants).
 
 **Estrutura da landing page:**
-- Nav com logo ⚡ Skills Premium + link INEMA.CLUB (sky-400) + links para as 3 trilhas
+- Nav com logo ⚡ Skills Premium + link ARCKHÉ AI (sky-400) + links para as 3 trilhas
 - Hero: título, subtítulo, 3 stats (20 módulos, 3 trilhas, nível iniciante ao expert)
 - Seçêo "3 Trilhas" — 3 cards grandes (emerald, blue, purple) com lista de módulos de cada
 - CTA final
-- Footer com INEMA.CLUB
+- Footer com ARCKHÉ AI
 
 - [ ] **Step 1: Criar index.html seguindo Sec. 8.1 do MASTER como base**
 
@@ -333,11 +333,11 @@ git push -u origin main
 - [ ] **Step 2: Habilitar GitHub Pages via API**
 
 ```bash
-gh api repos/inematds/skills-premium/pages \
+gh api repos/linnoff88-dev/skills-premium/pages \
   --method POST \
   -f source.branch=main \
   -f source.path=/ 2>/dev/null || \
-gh api repos/inematds/skills-premium/pages \
+gh api repos/linnoff88-dev/skills-premium/pages \
   --method PUT \
   -f source.branch=main \
   -f source.path=/
@@ -346,7 +346,7 @@ gh api repos/inematds/skills-premium/pages \
 - [ ] **Step 3: Verificar URL do GitHub Pages**
 
 ```bash
-gh api repos/inematds/skills-premium/pages | python3 -c "import sys,json; p=json.load(sys.stdin); print(p.get('html_url',''))"
+gh api repos/linnoff88-dev/skills-premium/pages | python3 -c "import sys,json; p=json.load(sys.stdin); print(p.get('html_url',''))"
 ```
 
 - [ ] **Step 4: Enviar notificaçêo via openpcbot**
@@ -358,5 +358,5 @@ gh api repos/inematds/skills-premium/pages | python3 -c "import sys,json; p=json
 🎯 3 trilhas: Fundamentos, Dicas Técnicas, No Expert
 📦 20 módulos no total
 
-🔗 GitHub Pages: https://inematds.github.io/skills-premium"
+🔗 GitHub Pages: https://linnoff88-dev.github.io/arckhe-skills-premium"
 ```

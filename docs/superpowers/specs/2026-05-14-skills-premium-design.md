@@ -1,9 +1,9 @@
 # Skills Premium — Design Spec
 
 **Data:** 2026-05-14  
-**Repo:** https://github.com/inematds/skills-premium  
+**Repo:** https://github.com/linnoff88-dev/skills-premium  
 **Deploy:** GitHub Pages  
-**Formato:** INEMA.CLUB (Hub e Spoke)
+**Formato:** ARCKHÉ AI (Hub e Spoke)
 
 ---
 
@@ -93,7 +93,7 @@ skills-premium/
 
 ---
 
-## Regras de Design (INEMA.CLUB)
+## Regras de Design (ARCKHÉ AI)
 
 - **Trilha 1:** Emerald (`text-emerald-400`, `bg-emerald-500/20`, `border-emerald-500/30`)
 - **Trilha 2:** Blue (`text-blue-400`, `bg-blue-500/20`, `border-blue-500/30`)
@@ -102,7 +102,7 @@ skills-premium/
 - Botões sempre à esquerda (`justify-start`)
 - Números em círculo (nêo setas)
 - 3 seções por tópico: O que é / Por que / Conceitos-chave
-- INEMA.CLUB presente em todas as páginas (`text-sky-400`)
+- ARCKHÉ AI presente em todas as páginas (`text-sky-400`)
 - Light mode CSS completo obrigatório
 - Navegaçêo Rápida obrigatória no index de cada trilha
 - Botêo "Ver Completo" em cada card de módulo
